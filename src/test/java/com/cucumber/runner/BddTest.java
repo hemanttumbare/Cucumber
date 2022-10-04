@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features= {"src/test/resources"},
 	glue = {"com.cucumber.stepDefinitions","com.cucumber.hooks"},
 	tags="@demo",
-	plugin = { "pretty" },
+	plugin = { "pretty"},
 	monochrome=true
 	)
 
