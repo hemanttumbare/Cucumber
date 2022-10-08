@@ -18,14 +18,12 @@ pipeline {
        
         parallel {
             stage("one"){
-                agent any
                 steps{
                     bat "mvn -v"
                 }
             }
             stage("two"){
-                agent any
-                steps{
+               steps{
                     bat "mvn -v"
                 }
             }
