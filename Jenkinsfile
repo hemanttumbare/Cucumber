@@ -39,10 +39,10 @@ pipeline {
                                   bat "mvn clean install -Dcucumber.filter.tags=${params.Tags}"
                                 }
                    }
-                post {
-                     always {
-                        allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
-                     }
-                   }
+                stage("Report"){
+                            steps{
+                                 allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+                                }
+                        }
             }
 }
