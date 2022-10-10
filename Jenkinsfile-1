@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'image 'ubuntu'' }
+        docker { image 'ubuntu' }
       }
       steps {
         sh 'pwd'
