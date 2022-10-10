@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('Back-end') {
       agent {
-        docker { image 'maven:3.8.1-adoptopenjdk-11' }
+        docker { image 'image 'ubuntu'' }
       }
       steps {
-        sh 'mvn --version'
+        sh 'pwd'
       }
     }
     stage('Front-end') {
@@ -14,7 +14,7 @@ pipeline {
         docker { image 'ubuntu' }
       }
       steps {
-        sh 'pwd'
+        sh 'ls'
       }
     }
   }
