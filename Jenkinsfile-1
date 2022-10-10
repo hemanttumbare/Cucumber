@@ -1,20 +1,11 @@
 pipeline {
-  agent none
+  agent { dockerfile true }
   stages {
-    stage('Back-end') {
-      agent {
-        docker { image 'ubuntu' }
-      }
+    stage('Test') {
       steps {
-        sh 'pwd'
-      }
-    }
-    stage('Front-end') {
-      agent {
-        docker { image 'ubuntu' }
-      }
-      steps {
-        sh 'ls'
+        sh '''
+          mvn --version
+        '''
       }
     }
   }
