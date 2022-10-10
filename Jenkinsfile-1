@@ -14,7 +14,7 @@ pipeline {
         docker { image 'ubuntu' }
       }
       steps {
-        sh 'node --version'
+        sh 'pwd'
       }
     }
   }
